@@ -1,76 +1,74 @@
-const express = require('express');
-const Multer = require('multer');
-const app = express();
-const port = 5000;
+const express = require('express')
+const Multer = require('multer')
+const bodyParser = require('body-parser')
+const app = express()
+const port = 5000
 
-const GcpBucket = require('./infrastructures/GcpBucket');
-const { addUser, pool } = require('./services/userServices');
-const { addImg, imgPool } = require('./services/imgServices');
+// Module Import
+const GcpBucket = require('./infrastructures/GcpBucket')
+const { addImg, imgPool } = require('./services/imgServices')
 
-app.use(express.json());
+const newsApi = require('./api/news')
+const usersApi = require('./api/users')
+const modelApi = require('./api/model/runner1')
+
+app.use(express.json())
+app.use(bodyParser.json())
+
+app.use('/api', newsApi)
+app.use('/api', usersApi)
+app.use('/api', modelApi)
 
 const multer = Multer({
     storage: Multer.memoryStorage(),
     limits: {
         fileSize: 5 * 1024 * 1024, // Limit file size to 5MB
     },
-});
+})
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
-
-app.post('/users', async (req, res) => {
-    const { email, password } = req.body;
-
-    const newUser = {
-        email,
-        password,
-    };
-
-    const postedUser = await addUser(newUser, pool);
-
-    res.status(200).send({
-        status: 'success',
-        data: postedUser,
-    });
-});
+    res.send('Selamat Datang di Sampahku App!')
+})
 
 app.post('/upload', multer.single('photo'), async (req, res) => {
+
     try {
-        const file = req.file;
-        const { id } = req.body;
-        console.log(file);
+
+        const file = req.file
+        const { id } = req.body
+        console.log(file)
 
         if (!file) {
-            return res.status(400).send('No file uploaded.');
+            return res.status(400).send('No file uploaded.')
         }
 
-        const originalName = file.originalname;
+        const originalName = file.originalname
 
-        const gcpBucket = new GcpBucket();
+        const gcpBucket = new GcpBucket()
 
         console.log(GcpBucket)
-        const imageUrl = await gcpBucket.uploadImagToBucket('upload', file);
 
-
+        const imageUrl = await gcpBucket.uploadImgToBucket('upload', file)
 
         const newImgUrl = {
             id, imageUrl
         }
 
-        const postedImgUrl = await addImg(newImgUrl, imgPool);
+        const postedImgUrl = await addImg(newImgUrl, imgPool)
 
         res.status(200).send({
             status: 'success',
             data: postedImgUrl
-        });
+        })
 
     } catch (error) {
-        console.error('Error uploading file:', error);
-        res.status(500).send('Error uploading file.');
+
+        console.error('Error uploading file:', error)
+        res.status(500).send('Error uploading file.')
+
     }
-});
+
+})
 
 app.listen(port, () => {
     console.log(`Sampahku app listening on http://localhost:${port}`);
