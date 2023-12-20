@@ -56,10 +56,9 @@ app.post('/upload', multer.single('photo'), async (req, res) => {
 
         const postedImgUrl = await addImg(newImgUrl, imgPool)
 
-        res.status(200).send({
-            status: 'success',
-            data: postedImgUrl
-        })
+        console.log(postedImgUrl.imageUrl)
+
+        res.redirect(`/api/predict?data=${postedImgUrl.imageUrl}`)
 
     } catch (error) {
 
