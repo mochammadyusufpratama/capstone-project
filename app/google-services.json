@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "592117419042",
+    "firebase_url": "https://capstoneproject-265eb-default-rtdb.firebaseio.com",
+    "project_id": "capstoneproject-265eb",
+    "storage_bucket": "capstoneproject-265eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592117419042:android:146eaa4544a98842210e7b",
+        "android_client_info": {
+          "package_name": "com.dicoding.capstoneproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvhKMBjOgcXcF4-oMdwPn4q7QJi7QC_6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

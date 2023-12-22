@@ -1,0 +1,30 @@
+ <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CapstoneProject" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+         <item name="windowActionBar">false</item>
+         <item name="windowNoTitle">true</item>
+         <!-- Lainnya -->
+     </style>
+
+
+     <style name="FullScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+         <item name="android:windowTranslucentStatus">true</item>
+     </style>
+
+     <style name="NoActionBarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+         <item name="android:statusBarColor">@android:color/white</item>
+     </style>
+
+     <style name="CardShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+         <item name="cornerFamily">cut</item>
+         <item name="cornerSize">25dp</item>
+     </style>
+</resources>
+
