@@ -19,7 +19,7 @@
 
 ## About the project :
 
-This is the final project from Bangkit Academy 2023 Batch 2, about waste detection. As one of the requirement for graduation. Build an android app with scanning waste features and user reporting features.
+This is the final project from Bangkit Academy 2023 Batch 2, about waste detection. As one of the requirement for graduation. Build an android app with scanning waste features and user reporting features. There is the [prototype](https://www.figma.com/file/DN5hTVJhNqnAFrhlTGLCym/SAMPAHKU?type=design&node-id=0%3A1&mode=design&t=KFgkez1z6WadLXuP-1) for our mobile application
 
 ## Build with :
 
