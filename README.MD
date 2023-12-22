@@ -1,52 +1,60 @@
-# Capstone Project (Sampahku App)
+# Backend API Capstone Project (Sampahku App)
 ---
-## Our team :
+## Our teams :
 
 ```
-1. M668BSX0266 - Keny Mihewu
-   - Machine Learning, STMIK Palangka Raya
-2. M282BSY1120 - Aqil Afif
-   - Machine Learning, Universitas Negeri Padang
-3. M004BSY0662 - Moh Yusril Amrillah
-   - Machine Learning, Institut Teknologi Sepuluh Nopember
-4. C296BSY3887 - Mochammad Yusuf Pratama
+1. C296BSY3887 - Mochammad Yusuf Pratama
    - Cloud Computing, Universitas Pembangunan Nasional Veteran Jawa Timur
-5. C296BSX3913 - Amalia Putri
+2. C296BSX3913 - Amalia Putri
    - Cloud Computing, Universitas Pembangunan Nasional Veteran Jawa Timur
-6. A296BSY2705 - M Ailza Sifaul Anam
-   - Mobile Development, Universitas Pembangunan Nasional Veteran Jawa Timur
 ```
 
 ## About the project :
 
-This is the final project from Bangkit Academy 2023 Batch 2, about waste detection. As one of the requirement for graduation. Build an android app with scanning waste features and user reporting features.
+This is the final project from Bangkit Academy 2023 Batch 2, about waste detection. We are create this backend API for integrate the Mobile Development and Machine Learning,  Deployment and Storage Management the application using Google Cloud Platform.
 
 ## Build with :
 
-- Android studio
+- Visual Studio Code
 - Firebase
-- Python
-- Figma
-- Google colab
-- Visual studio code
+- Node JS Express
+- Postman
+- Google Cloud Platform
+
+## Instalation : 
+
+```
+npm install
+```
+```
+Set Up your credentials.json that from Google Cloud Platform
+```
+```
+npm run dev
+```
 
 ## Features :
 
+GET All News from Google Search Engine
 ```
-1. Scan Waste Feature:
-   - Development of waste scanning functionality, including image capture and recognition.
-   - Provision of waste details and recycling instructions.
-2. User Reporting Feature:
-   - The application is only an intermediary for communication between users and related institutions
+METHOD : GET curl 'http://localhost:8080/api/news'
 ```
-
----
-
-## Branch :
-
-`cloud-computing for Cloud Computing Teams`
-`mobile-development for Mobile Development Teams`
-`machine-learning for Machine Learning Teams`
+POST Register
+```
+METHOD : POST curl 'http://localhost:8080/api/register'
+```
+POST Login
+```
+METHOD : POST curl 'http://localhost:8080/api/login'
+```
+POST Logout
+```
+METHOD : POST curl 'http://localhost:8080/api/logout'
+```
+POST Upload
+```
+METHOD : POST curl 'http://localhost:8080/upload'
+```
 
 ---
 
