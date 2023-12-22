@@ -37,23 +37,23 @@ npm run dev
 
 GET All News from Google Search Engine
 ```
-METHOD : GET curl 'http://localhost:8080/api/news'
+METHOD : GET curl 'http://localhost:5000/api/news'
 ```
 POST Register
 ```
-METHOD : POST curl 'http://localhost:8080/api/register'
+METHOD : POST curl 'http://localhost:5000/api/register'
 ```
 POST Login
 ```
-METHOD : POST curl 'http://localhost:8080/api/login'
+METHOD : POST curl 'http://localhost:5000/api/login'
 ```
 POST Logout
 ```
-METHOD : POST curl 'http://localhost:8080/api/logout'
+METHOD : POST curl 'http://localhost:5000/api/logout'
 ```
 POST Upload
 ```
-METHOD : POST curl 'http://localhost:8080/upload'
+METHOD : POST curl 'http://localhost:5000/upload'
 ```
 
 ---
