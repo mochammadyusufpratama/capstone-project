@@ -1,6 +1,6 @@
 # Capstone Project (Sampahku App)
 ---
-## Our team :
+## Our team (CH2-PS507) :
 
 ```
 1. M668BSX0266 - Keny Mihewu
