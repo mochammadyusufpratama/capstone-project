@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
-const { initializeApp } = require("firebase/app");
+const { initializeApp } = require('firebase/app')
+require('firebase/firestore');
 const { getAnalytics } = require("firebase/analytics");
 const { Datastore } = require('@google-cloud/datastore')
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,13 +16,12 @@ const firebaseConfig = {
     messagingSenderId: "603037324334",
     appId: "1:603037324334:web:691968450c6438e7df3bbf",
     measurementId: "G-TR08N02GXY"
-};
+}
 
 // Initialize Firebase
+const firebase = initializeApp(firebaseConfig)
 
-const app = initializeApp(firebaseConfig)
-
-const projectId = app.options.projectId
+const projectId = firebase.options.projectId
 const keyFilename = 'credentials.json'
 // Instantiate a Datastore client with the project ID
 const db = new Datastore({
@@ -39,7 +39,6 @@ const addUser = async (registerUser, pool) => {
             key: pool.db.key(['users']),
             data: registerUser,
         }
-
         try {
             await pool.db.save(entity)
             return entity.data
@@ -53,4 +52,4 @@ const addUser = async (registerUser, pool) => {
     }
 }
 
-module.exports = { pool, addUser }
+module.exports = { firebase, pool, addUser };
