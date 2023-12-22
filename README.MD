@@ -44,9 +44,9 @@ This is the final project from Bangkit Academy 2023 Batch 2, about waste detecti
 
 ## Branch :
 
-- `cloud-computing for Cloud Computing Teams`
-- `mobile-development for Mobile Development Teams`
-- `machine-learning for Machine Learning Teams`
+- cloud-computing for Cloud Computing Teams
+- mobile-development for Mobile Development Teams
+- machine-learning for Machine Learning Teams
 
 ---
 
